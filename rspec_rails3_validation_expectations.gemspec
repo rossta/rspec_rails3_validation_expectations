@@ -1,5 +1,3 @@
-require 'rake'
-
 Gem::Specification.new do |s|
   s.name     = "rspec_rails3_validation_expectations"
   s.version  = "0.0.1"
@@ -11,7 +9,9 @@ Gem::Specification.new do |s|
   s.rubyforge_project = "rspec_rails3_validation_expectations"
   s.has_rdoc = true
   s.authors  = ["Matthew Bass"]
-  s.files    = FileList["[A-Z]*", "init.rb", "{lib,spec}/**/*.{rb,xml}"]
+  s.files    =  Dir.glob("[A-Z]*")
+  s.files    += ["init.rb"]
+  s.files    += Dir.glob("{lib,spec}/**/*.{rb,xml}")
   s.rdoc_options = ["--main", "README"]
   s.extra_rdoc_files = ["README"]
   s.add_development_dependency "activesupport", "3.0.3"
